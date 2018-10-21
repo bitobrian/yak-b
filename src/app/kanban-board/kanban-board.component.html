@@ -1,0 +1,42 @@
+<div class="board">
+  <div class="example-container">
+    <div fxLayout="row">
+      <h2 flex>Backlog</h2>
+      <button mat-raised-button (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+
+    <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList,wipList,holdList]"
+      class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Hold</h2>
+
+    <div cdkDropList #holdList="cdkDropList" [cdkDropListData]="hold" [cdkDropListConnectedTo]="[todoList,wipList]"
+      class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of hold" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>WIP</h2>
+
+    <div cdkDropList #wipList="cdkDropList" [cdkDropListData]="wip" [cdkDropListConnectedTo]="[todoList,doneList,holdList]"
+      class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of wip" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <h2>Done</h2>
+
+    <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList,holdList,wipList]"
+      class="example-list" (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+</div>
