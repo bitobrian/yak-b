@@ -9,10 +9,10 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
   styleUrls: ['./kanban-board.component.css']
 })
 export class KanbanBoardComponent implements OnInit {
-  todo = [];
-  wip = [];
-  hold = [];
-  done = [];
+  todo = ['Tacos'];
+  wip = ['Tacos'];
+  hold = ['Tacos'];
+  done = ['Tacos'];
 
   title = 'A Title mfer';
   description = 'A description mfreerrerererer.';

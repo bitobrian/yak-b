@@ -2,9 +2,6 @@
   <div class="example-container">
     <div fxLayout="row">
       <h2 flex>Backlog</h2>
-      <button mat-raised-button (click)="openDialog()">
-        <mat-icon>add</mat-icon>
-      </button>
     </div>
 
     <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList,wipList,holdList]"
@@ -40,3 +37,7 @@
     </div>
   </div>
 </div>
+
+<button mat-fab class="add-button" (click)="openDialog()">
+  <mat-icon>add</mat-icon>
+</button>

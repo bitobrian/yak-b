@@ -1,6 +1,6 @@
 .drawer {
-    background: linear-gradient(to bottom, rgba(235,241,246,1) 0%,rgba(171,211,238,1) 50%,rgba(137,195,235,1) 100%,rgba(213,235,251,1) 100%);
-    /* background: rgb(20, 20, 20); */
+    /* background: linear-gradient(to bottom, rgba(235,241,246,1) 0%,rgba(171,211,238,1) 50%,rgba(137,195,235,1) 100%,rgba(213,235,251,1) 100%); */
+    background: #3f51b5;
     min-width: 200px;
     display: flex;
     flex-direction: column;

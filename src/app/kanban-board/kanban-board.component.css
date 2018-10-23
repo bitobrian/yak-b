@@ -57,3 +57,11 @@
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+
+.add-button {
+  top: auto !important;
+  right: 50px !important;
+  bottom: 50px !important;
+  left: auto !important;
+  position: fixed !important;
+}
